@@ -64,7 +64,7 @@ export function Header() {
 		>
 			<nav className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4">
 				<div className="flex items-center gap-6">
-					<a href="#" className="flex items-center gap-2 rounded-md p-2 hover:bg-accent">
+					<a href="/" className="flex items-center gap-2 rounded-md p-2 hover:bg-accent">
 						<img src="/images/bima-logo.png" alt="Bima Company" className="h-12 w-auto" />
 					</a>
 					<NavigationMenu className="hidden md:flex">
@@ -224,8 +224,8 @@ function ListItem({
 }
 
 const insuranceLinks: LinkItem[] = [
-	{ title: 'Pet Insurance', href: '#', description: 'Vet bills covered for cats, dogs & more', icon: PawPrint },
-	{ title: 'Wedding / Event Insurance', href: '#', description: 'Protection for the big day', icon: Heart },
+	{ title: 'Pet Insurance', href: '/pet-insurance', description: 'Complete health cover for your pets', icon: PawPrint },
+	{ title: 'Dog Insurance', href: '/dog-insurance', description: 'Vet bills covered specifically for dogs', icon: ShieldCheck },
 	{ title: 'Cyber Insurance', href: '#', description: 'Cover for digital fraud & data loss', icon: Lock },
 	{ title: 'Personal Liability Doctor', href: '#', description: 'Malpractice cover for practitioners', icon: Stethoscope },
 	{ title: 'Home / Renters Insurance', href: '#', description: 'Protect where you live', icon: Home },
@@ -235,7 +235,7 @@ const insuranceLinks: LinkItem[] = [
 ];
 
 const companyLinks: LinkItem[] = [
-	{ title: 'About Us', href: '#', description: 'Learn more about our story and team', icon: Users },
+	{ title: 'About Us', href: '/about', description: 'Learn more about our story and team', icon: Users },
 	{ title: 'Customer Stories', href: '#', description: 'See how we’ve helped our customers', icon: Star },
 	{ title: 'Partnerships', href: '#', icon: Handshake, description: 'Collaborate with us for mutual growth' },
 ];
