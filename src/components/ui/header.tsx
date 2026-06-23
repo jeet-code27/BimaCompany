@@ -226,11 +226,11 @@ function ListItem({
 const insuranceLinks: LinkItem[] = [
 	{ title: 'Pet Insurance', href: '/pet-insurance', description: 'Complete health cover for your pets', icon: PawPrint },
 	{ title: 'Dog Insurance', href: '/dog-insurance', description: 'Vet bills covered specifically for dogs', icon: ShieldCheck },
-	{ title: 'Cyber Insurance', href: '#', description: 'Cover for digital fraud & data loss', icon: Lock },
+	{ title: 'Cyber Insurance', href: '/cyber-insurance', description: 'Cover for digital fraud & data loss', icon: Lock },
 	{ title: 'Personal Liability Doctor', href: '#', description: 'Malpractice cover for practitioners', icon: Stethoscope },
-	{ title: 'Home / Renters Insurance', href: '#', description: 'Protect where you live', icon: Home },
+	{ title: 'Home / Renters Insurance', href: '/home-insurance', description: 'Protect where you live', icon: Home },
 	{ title: 'Crop Insurance', href: '#', description: 'Cover for farmers against crop loss', icon: Sprout },
-	{ title: 'Auto Insurance', href: '#', description: 'Cover for your car, every trip', icon: Car },
+	{ title: 'Auto Insurance', href: '/auto-insurance', description: 'Cover for your car, every trip', icon: Car },
 	{ title: 'Travel Insurance', href: '#', description: 'Stay covered wherever you go', icon: Plane },
 ];
 
