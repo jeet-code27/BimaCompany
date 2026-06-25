@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Volume2, VolumeX } from "lucide-react";
 
 // Helper to parse 'rgb(r, g, b)' or 'rgba(r, g, b, a)' string to {r, g, b}
 const parseRgbColor = (colorString: string) => {
@@ -75,6 +76,7 @@ const InsuranceHero = React.forwardRef<HTMLDivElement, InsuranceHeroProps>(
     const animationFrameIdRef = useRef<number | null>(null);
     const videoRef = useRef<HTMLVideoElement>(null);
     const [showVideo, setShowVideo] = useState(false);
+    const [isMuted, setIsMuted] = useState(true);
 
     const resolvedCanvasColorsRef = useRef({
       strokeStyle: { r: 103, g: 60, b: 221 }, // Default to primary purple #673CDD
@@ -327,7 +329,7 @@ const InsuranceHero = React.forwardRef<HTMLDivElement, InsuranceHeroProps>(
                   <video
                     ref={videoRef}
                     src={videoUrl}
-                    muted
+                    muted={isMuted}
                     playsInline
                     className={`w-full h-full object-cover transition-opacity duration-300 ${
                       showVideo ? "opacity-100" : "opacity-0 pointer-events-none"
@@ -341,6 +343,15 @@ const InsuranceHero = React.forwardRef<HTMLDivElement, InsuranceHeroProps>(
                     aria-label="Play video"
                   >
                     <PlayIcon className="w-5 h-5 sm:w-6 sm:h-6" />
+                  </button>
+                )}
+                {showVideo && (
+                  <button
+                    onClick={() => setIsMuted(!isMuted)}
+                    className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 z-20 p-3 sm:p-4 bg-black/50 hover:bg-black/70 text-white backdrop-blur-md rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-white"
+                    aria-label={isMuted ? "Unmute video" : "Mute video"}
+                  >
+                    {isMuted ? <VolumeX className="w-5 h-5 sm:w-6 sm:h-6" /> : <Volume2 className="w-5 h-5 sm:w-6 sm:h-6" />}
                   </button>
                 )}
               </div>

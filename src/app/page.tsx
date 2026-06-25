@@ -26,7 +26,7 @@ export default function Home() {
         <InsuranceHero 
           services={services}
           imageUrl="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80"
-          videoUrl="https://www.w3schools.com/html/mov_bbb.mp4"
+          videoUrl="/videos/hero.mp4"
         />
         <HowItWorks />
         <WhyChooseUs />
