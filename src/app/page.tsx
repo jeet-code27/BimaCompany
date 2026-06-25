@@ -7,14 +7,14 @@ import { CinematicFooter } from "@/components/ui/motion-footer";
 
 // TODO: swap href "#" for the real Bima Company URLs once the site is wired up
 const services: InsuranceService[] = [
-  { name: "Pet Insurance", href: "#", imageSrc: "/images/pet-insurance.png" },
+  { name: "Pet Insurance", href: "/pet-insurance", imageSrc: "/images/pet-insurance.png" },
   { name: "Wedding / Event Insurance", href: "#", imageSrc: "/images/wedding-insurance.png" },
-  { name: "Cyber Insurance", href: "#", imageSrc: "/images/cyber-insurance.png" },
-  { name: "Personal Liability Doctor", href: "#", imageSrc: "/images/personal-liablity.png" },
-  { name: "Home / Renters Insurance", href: "#", imageSrc: "/images/home-insurance.png" },
+  { name: "Cyber Insurance", href: "/cyber-insurance", imageSrc: "/images/cyber-insurance.png" },
+  { name: "Personal Liability Doctor", href: "/doctors-indemnity", imageSrc: "/images/personal-liablity.png" },
+  { name: "Home / Renters Insurance", href: "/home-insurance", imageSrc: "/images/home-insurance.png" },
   { name: "Corporate Liability", href: "#", imageSrc: "/images/corporate-liablity.png" },
-  { name: "Auto Insurance", href: "#", imageSrc: "/images/auto-insurance.png" },
-  { name: "Travel Insurance", href: "#", imageSrc: "/images/travel-insurance.png" },
+  { name: "Auto Insurance", href: "/auto-insurance", imageSrc: "/images/auto-insurance.png" },
+  { name: "Travel Insurance", href: "/travel-insurance", imageSrc: "/images/travel-insurance.png" },
 ];
 
 export default function Home() {

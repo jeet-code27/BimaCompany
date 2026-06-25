@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { MenuToggleIcon } from '@/components/ui/menu-toggle-icon';
@@ -64,9 +65,9 @@ export function Header() {
 		>
 			<nav className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4">
 				<div className="flex items-center gap-6">
-					<a href="/" className="flex items-center gap-2 rounded-md p-2 hover:bg-accent">
+					<Link href="/" className="flex items-center gap-2 rounded-md p-2 hover:bg-accent">
 						<img src="/images/bima-logo.png" alt="Bima Company" className="h-12 w-auto" />
-					</a>
+					</Link>
 					<NavigationMenu className="hidden md:flex">
 						<NavigationMenuList>
 							<NavigationMenuItem>
@@ -82,9 +83,9 @@ export function Header() {
 									<div className="p-2">
 										<p className="text-muted-foreground text-sm">
 											Not sure where to start?{' '}
-											<a href="#" className="text-foreground font-medium hover:underline">
+											<Link href="#" className="text-foreground font-medium hover:underline">
 												Talk to an advisor
-											</a>
+											</Link>
 										</p>
 									</div>
 								</NavigationMenuContent>
@@ -117,9 +118,9 @@ export function Header() {
 								</NavigationMenuContent>
 							</NavigationMenuItem>
 							<NavigationMenuLink className="px-4" asChild>
-								<a href="#" className="hover:bg-accent rounded-md p-2">
+								<Link href="#" className="hover:bg-accent rounded-md p-2">
 									Claims
-								</a>
+								</Link>
 							</NavigationMenuLink>
 						</NavigationMenuList>
 					</NavigationMenu>
@@ -210,7 +211,7 @@ function ListItem({
 }: React.ComponentProps<typeof NavigationMenuLink> & LinkItem) {
 	return (
 		<NavigationMenuLink className={cn('w-full flex flex-row gap-x-2 data-[active=true]:focus:bg-accent data-[active=true]:hover:bg-accent data-[active=true]:bg-accent/50 data-[active=true]:text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground rounded-sm p-2', className)} {...props} asChild>
-			<a href={href}>
+			<Link href={href}>
 				<div className="bg-background/40 flex aspect-square size-12 items-center justify-center rounded-md border shadow-sm">
 					<Icon className="text-foreground size-5" />
 				</div>
@@ -218,7 +219,7 @@ function ListItem({
 					<span className="font-medium">{title}</span>
 					<span className="text-muted-foreground text-xs">{description}</span>
 				</div>
-			</a>
+			</Link>
 		</NavigationMenuLink>
 	);
 }
@@ -227,11 +228,11 @@ const insuranceLinks: LinkItem[] = [
 	{ title: 'Pet Insurance', href: '/pet-insurance', description: 'Complete health cover for your pets', icon: PawPrint },
 	{ title: 'Dog Insurance', href: '/dog-insurance', description: 'Vet bills covered specifically for dogs', icon: ShieldCheck },
 	{ title: 'Cyber Insurance', href: '/cyber-insurance', description: 'Cover for digital fraud & data loss', icon: Lock },
-	{ title: 'Personal Liability Doctor', href: '#', description: 'Malpractice cover for practitioners', icon: Stethoscope },
+	{ title: 'Personal Liability Doctor', href: '/doctors-indemnity', description: 'Malpractice cover for practitioners', icon: Stethoscope },
 	{ title: 'Home / Renters Insurance', href: '/home-insurance', description: 'Protect where you live', icon: Home },
-	{ title: 'Crop Insurance', href: '#', description: 'Cover for farmers against crop loss', icon: Sprout },
+	{ title: 'Crop Insurance', href: '/crop-insurance', description: 'Cover for farmers against crop loss', icon: Sprout },
 	{ title: 'Auto Insurance', href: '/auto-insurance', description: 'Cover for your car, every trip', icon: Car },
-	{ title: 'Travel Insurance', href: '#', description: 'Stay covered wherever you go', icon: Plane },
+	{ title: 'Travel Insurance', href: '/travel-insurance', description: 'Stay covered wherever you go', icon: Plane },
 ];
 
 const companyLinks: LinkItem[] = [

@@ -26,6 +26,10 @@
   }
 }
 
+button{
+  cursor: pointer;
+}
+
 /* Custom variants */
 @custom-variant data-open {
   &:where([data-state="open"]),

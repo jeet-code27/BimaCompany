@@ -4,6 +4,7 @@ import { useEffect, useRef, useCallback, useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 // Helper to parse 'rgb(r, g, b)' or 'rgba(r, g, b, a)' string to {r, g, b}
 const parseRgbColor = (colorString: string) => {
@@ -363,13 +364,12 @@ const InsuranceHero = React.forwardRef<HTMLDivElement, InsuranceHeroProps>(
                 const themeColor = themeColors[index % themeColors.length];
                 
                 return (
-                <motion.a
-                  key={service.name}
-                  href={service.href}
-                  variants={itemVariants}
-                  whileHover={{ y: -10, scale: 1.05, zIndex: 40 }}
-                  className="w-full max-w-[260px] block group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 z-20"
-                >
+                <Link href={service.href} passHref legacyBehavior key={service.name}>
+                  <motion.a
+                    variants={itemVariants}
+                    whileHover={{ y: -10, scale: 1.05, zIndex: 40 }}
+                    className="w-full max-w-[260px] block group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 z-20"
+                  >
                   <div
                     className={cn(
                       "relative pt-10 pb-6 px-6 rounded-t-[50%] h-[320px] md:h-[380px] flex flex-col items-center justify-between text-center overflow-hidden shadow-sm group-hover:shadow-xl transition-all",
@@ -386,7 +386,8 @@ const InsuranceHero = React.forwardRef<HTMLDivElement, InsuranceHeroProps>(
                       style={{ maxHeight: "85%" }}
                     />
                   </div>
-                </motion.a>
+                  </motion.a>
+                </Link>
               )})}
             </motion.div>
           </div>
