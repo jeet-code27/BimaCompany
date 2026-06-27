@@ -230,6 +230,7 @@ const insuranceLinks: LinkItem[] = [
 	{ title: 'Cyber Insurance', href: '/cyber-insurance', description: 'Cover for digital fraud & data loss', icon: Lock },
 	{ title: 'Personal Liability Doctor', href: '/doctors-indemnity', description: 'Malpractice cover for practitioners', icon: Stethoscope },
 	{ title: 'Home / Renters Insurance', href: '/home-insurance', description: 'Protect where you live', icon: Home },
+	{ title: 'Wedding Insurance', href: '/wedding-insurance', description: 'Safeguard your big day', icon: Heart },
 	{ title: 'Crop Insurance', href: '/crop-insurance', description: 'Cover for farmers against crop loss', icon: Sprout },
 	{ title: 'Auto Insurance', href: '/auto-insurance', description: 'Cover for your car, every trip', icon: Car },
 	{ title: 'Travel Insurance', href: '/travel-insurance', description: 'Stay covered wherever you go', icon: Plane },

@@ -8,7 +8,7 @@ import { CinematicFooter } from "@/components/ui/motion-footer";
 // TODO: swap href "#" for the real Bima Company URLs once the site is wired up
 const services: InsuranceService[] = [
   { name: "Pet Insurance", href: "/pet-insurance", imageSrc: "/images/pet-insurance.png" },
-  { name: "Wedding / Event Insurance", href: "#", imageSrc: "/images/wedding-insurance.png" },
+  { name: "Wedding / Event Insurance", href: "/wedding-insurance", imageSrc: "/images/wedding-insurance.png" },
   { name: "Cyber Insurance", href: "/cyber-insurance", imageSrc: "/images/cyber-insurance.png" },
   { name: "Personal Liability Doctor", href: "/doctors-indemnity", imageSrc: "/images/personal-liablity.png" },
   { name: "Home / Renters Insurance", href: "/home-insurance", imageSrc: "/images/home-insurance.png" },

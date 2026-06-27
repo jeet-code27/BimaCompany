@@ -375,31 +375,36 @@ const InsuranceHero = React.forwardRef<HTMLDivElement, InsuranceHeroProps>(
                 const themeColor = themeColors[index % themeColors.length];
                 
                 return (
-                <Link href={service.href} passHref legacyBehavior key={service.name}>
-                  <motion.a
+                  <motion.div
+                    key={service.name}
                     variants={itemVariants}
                     whileHover={{ y: -10, scale: 1.05, zIndex: 40 }}
-                    className="w-full max-w-[260px] block group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 z-20"
+                    className="w-full max-w-[260px] z-20"
                   >
-                  <div
-                    className={cn(
-                      "relative pt-10 pb-6 px-6 rounded-t-[50%] h-[320px] md:h-[380px] flex flex-col items-center justify-between text-center overflow-hidden shadow-sm group-hover:shadow-xl transition-all",
-                      themeColor
-                    )}
-                  >
-                    <div className="text-black z-10 relative mt-2">
-                      <h3 className="font-bold text-base md:text-lg leading-snug px-2">{service.name}</h3>
-                    </div>
-                    <img
-                      src={service.imageSrc}
-                      alt={service.name}
-                      className="absolute bottom-0 left-0 w-full h-auto object-cover object-bottom transition-all duration-500 ease-out origin-bottom group-hover:scale-[1.12] group-hover:-rotate-2 group-hover:-translate-y-1"
-                      style={{ maxHeight: "85%" }}
-                    />
-                  </div>
-                  </motion.a>
-                </Link>
-              )})}
+                    <Link
+                      href={service.href}
+                      className="block group w-full h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    >
+                      <div
+                        className={cn(
+                          "relative pt-10 pb-6 px-6 rounded-t-[50%] h-[320px] md:h-[380px] flex flex-col items-center justify-between text-center overflow-hidden shadow-sm group-hover:shadow-xl transition-all",
+                          themeColor
+                        )}
+                      >
+                        <div className="text-black z-10 relative mt-2">
+                          <h3 className="font-bold text-base md:text-lg leading-snug px-2">{service.name}</h3>
+                        </div>
+                        <img
+                          src={service.imageSrc}
+                          alt={service.name}
+                          className="absolute bottom-0 left-0 w-full h-auto object-cover object-bottom transition-all duration-500 ease-out origin-bottom group-hover:scale-[1.12] group-hover:-rotate-2 group-hover:-translate-y-1"
+                          style={{ maxHeight: "85%" }}
+                        />
+                      </div>
+                    </Link>
+                  </motion.div>
+                );
+              })}
             </motion.div>
           </div>
         </main>
