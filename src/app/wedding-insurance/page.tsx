@@ -17,6 +17,7 @@ import {
   HeartHandshake
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function WeddingInsurancePage() {
   return (
@@ -54,7 +55,9 @@ export default function WeddingInsurancePage() {
               </div>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">
-                <ButtonRotate text="CHECK OUR PRICES • " />
+                <Link href="/wedding-insurance/apply">
+                  <ButtonRotate text="GET A QUOTE NOW • " />
+                </Link>
               </div>
             </div>
           </div>
@@ -311,7 +314,9 @@ export default function WeddingInsurancePage() {
                    In the context of big fat Indian weddings, where the stakes are high and the expenses substantial, having wedding insurance is a prudent decision. It ensures that the dream wedding remains a cherished memory, even if unforeseen events try to disrupt the festivities.
                  </p>
                  <div className="pt-6">
-                    <ButtonRotate text="GET A FREE QUOTE • " />
+                    <Link href="/wedding-insurance/apply">
+                      <ButtonRotate text="GET A FREE QUOTE • " />
+                    </Link>
                  </div>
               </div>
            </div>

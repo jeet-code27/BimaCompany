@@ -49,6 +49,7 @@ export interface InsuranceHeroProps
   services: InsuranceService[];
   imageUrl?: string;
   videoUrl?: string;
+  actionHref?: string;
 }
 
 const InsuranceHero = React.forwardRef<HTMLDivElement, InsuranceHeroProps>(
@@ -60,6 +61,7 @@ const InsuranceHero = React.forwardRef<HTMLDivElement, InsuranceHeroProps>(
       services,
       imageUrl = "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80",
       videoUrl,
+      actionHref = "/get-a-quote",
       className,
       ...props
     },
@@ -302,14 +304,16 @@ const InsuranceHero = React.forwardRef<HTMLDivElement, InsuranceHeroProps>(
           </div>
 
           <div className="mt-10 flex justify-center w-full">
-            <Button
-              ref={targetRef}
-              size="lg"
-              variant="cta"
-              className="rounded-full text-lg px-8 py-6 z-20 shadow-lg relative"
-            >
-              {buttonText}
-            </Button>
+            <Link href={actionHref}>
+              <Button
+                ref={targetRef}
+                size="lg"
+                variant="cta"
+                className="rounded-full text-lg px-8 py-6 z-20 shadow-lg relative"
+              >
+                {buttonText}
+              </Button>
+            </Link>
           </div>
 
           {/* New Image/Video Hero Card */}

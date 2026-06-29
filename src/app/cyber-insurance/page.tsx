@@ -18,6 +18,7 @@ import {
   Users
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function CyberInsurancePage() {
   return (
@@ -50,7 +51,9 @@ export default function CyberInsurancePage() {
                 What Would Happen If Your Business Faced a <span className="text-blue-500">Cyber Attack?</span>
               </h1>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">
-                <ButtonRotate text="CHECK OUR PRICES • " />
+                <Link href="/cyber-insurance/apply">
+                  <ButtonRotate text="GET A QUOTE NOW • " />
+                </Link>
               </div>
             </div>
           </div>

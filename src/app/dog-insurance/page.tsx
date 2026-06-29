@@ -3,6 +3,7 @@ import { CinematicFooter } from "@/components/ui/motion-footer";
 import { ButtonRotate } from "@/components/ui/button-rotate";
 import { CheckCircle2, FileText, ShieldCheck, Stethoscope, PawPrint, HeartPulse, Info } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function DogInsurancePage() {
   return (
@@ -41,7 +42,9 @@ export default function DogInsurancePage() {
               </p>
               
               <div className="pt-8">
-                <ButtonRotate text="GET STARTED NOW • " />
+                <Link href="/dog-insurance/apply">
+                  <ButtonRotate text="GET STARTED NOW • " />
+                </Link>
               </div>
             </div>
           </div>
@@ -69,7 +72,9 @@ export default function DogInsurancePage() {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 This dog insurance in India covers multiple dog breeds under the ownership of a single individual/entity under one policy. Whether you’re looking for pet insurance for dogs, dog insurance, or the best pup insurance, you can find affordable dog insurance to suit your needs. Bima Company policies also include options for comprehensive dog health insurance.
               </p>
-              <ButtonRotate text="GET STARTED NOW • " />
+              <Link href="/dog-insurance/apply">
+                <ButtonRotate text="GET STARTED NOW • " />
+              </Link>
             </div>
           </div>
         </section>
@@ -157,7 +162,9 @@ export default function DogInsurancePage() {
                   </li>
                 ))}
               </ul>
-              <ButtonRotate text="GET STARTED NOW • " />
+              <Link href="/dog-insurance/apply">
+                <ButtonRotate text="GET STARTED NOW • " />
+              </Link>
             </div>
             <div className="order-1 md:order-2 relative h-[600px] w-full rounded-[2rem] overflow-hidden shadow-2xl">
               <Image 
@@ -282,7 +289,9 @@ export default function DogInsurancePage() {
           </div>
 
           <div className="mt-16 text-center">
-            <ButtonRotate text="GET STARTED NOW • " />
+            <Link href="/dog-insurance/apply">
+              <ButtonRotate text="GET STARTED NOW • " />
+            </Link>
           </div>
         </section>
 

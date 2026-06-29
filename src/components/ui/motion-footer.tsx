@@ -6,6 +6,12 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { cn } from "@/lib/utils";
 import { ShieldCheck, PhoneCall, ArrowUp } from "lucide-react";
+import Link from "next/link";
+
+const InstagramIcon = ({ className }: { className?: string }) => <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>;
+const XIcon = ({ className }: { className?: string }) => <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>;
+const LinkedinIcon = ({ className }: { className?: string }) => <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>;
+const FacebookIcon = ({ className }: { className?: string }) => <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>;
 
 // Register ScrollTrigger safely for React
 if (typeof window !== "undefined") {
@@ -326,14 +332,14 @@ export function CinematicFooter() {
             <div ref={linksRef} className="flex flex-col items-center gap-6 w-full">
               {/* App Store Links (Primary) */}
               <div className="flex flex-wrap justify-center gap-4 w-full">
-                <MagneticButton as="a" href="#" className="footer-glass-pill px-10 py-5 rounded-full text-foreground font-bold text-sm md:text-base flex items-center gap-3 group border border-[#673CDD]/30 hover:border-[#673CDD] hover:bg-[#673CDD]/5">
+                <MagneticButton as={Link} href="/get-a-quote" className="footer-glass-pill px-10 py-5 rounded-full text-foreground font-bold text-sm md:text-base flex items-center gap-3 group border border-[#673CDD]/30 hover:border-[#673CDD] hover:bg-[#673CDD]/5">
                   <ShieldCheck className="w-6 h-6 text-[#673CDD] group-hover:scale-110 transition-transform" />
                   Get an Instant Quote
                 </MagneticButton>
                 
-                <MagneticButton as="a" href="#" className="footer-glass-pill px-10 py-5 rounded-full text-foreground font-bold text-sm md:text-base flex items-center gap-3 group">
+                <MagneticButton as="a" href="tel:+919821774565" className="footer-glass-pill px-10 py-5 rounded-full text-foreground font-bold text-sm md:text-base flex items-center gap-3 group">
                   <PhoneCall className="w-6 h-6 text-muted-foreground group-hover:text-[#673CDD] transition-colors" />
-                  Talk to an Advisor
+                  +91-9821774565
                 </MagneticButton>
               </div>
 
@@ -347,6 +353,22 @@ export function CinematicFooter() {
                 </MagneticButton>
                 <MagneticButton as="a" href="#" className="footer-glass-pill px-6 py-3 rounded-full text-muted-foreground font-medium text-xs md:text-sm hover:text-foreground">
                   Claims Center
+                </MagneticButton>
+              </div>
+              
+              {/* Social Media Links */}
+              <div className="flex items-center gap-4 mt-6">
+                <MagneticButton as="a" href="https://www.instagram.com/bimacompany_/" target="_blank" className="w-10 h-10 rounded-full footer-glass-pill flex items-center justify-center text-muted-foreground hover:text-foreground">
+                  <InstagramIcon className="w-4 h-4 text-[#673CDD] group-hover:scale-110 transition-transform" />
+                </MagneticButton>
+                <MagneticButton as="a" href="https://x.com/Bima_Company" target="_blank" className="w-10 h-10 rounded-full footer-glass-pill flex items-center justify-center text-muted-foreground hover:text-foreground">
+                  <XIcon className="w-4 h-4 text-[#673CDD] group-hover:scale-110 transition-transform" />
+                </MagneticButton>
+                <MagneticButton as="a" href="https://www.linkedin.com/company/bimacompany/" target="_blank" className="w-10 h-10 rounded-full footer-glass-pill flex items-center justify-center text-muted-foreground hover:text-foreground">
+                  <LinkedinIcon className="w-4 h-4 text-[#673CDD] group-hover:scale-110 transition-transform" />
+                </MagneticButton>
+                <MagneticButton as="a" href="https://www.facebook.com/people/Bima-Company/61562498353993/" target="_blank" className="w-10 h-10 rounded-full footer-glass-pill flex items-center justify-center text-muted-foreground hover:text-foreground">
+                  <FacebookIcon className="w-4 h-4 text-[#673CDD] group-hover:scale-110 transition-transform" />
                 </MagneticButton>
               </div>
             </div>

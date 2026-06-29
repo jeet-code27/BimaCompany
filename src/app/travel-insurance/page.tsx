@@ -18,6 +18,7 @@ import {
   Luggage
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function TravelInsurancePage() {
   return (
@@ -53,7 +54,9 @@ export default function TravelInsurancePage() {
               </div>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">
-                <ButtonRotate text="CHECK OUR PRICES • " />
+                <Link href="/travel-insurance/apply">
+                  <ButtonRotate text="CHECK OUR PRICES • " />
+                </Link>
               </div>
             </div>
           </div>
@@ -247,7 +250,9 @@ export default function TravelInsurancePage() {
                    Travel insurance is an essential product for anyone planning a vacation. It provides comprehensive protection against a wide range of risks, including trip cancellations, medical emergencies, lost baggage, and travel delays. Understanding the exclusions in your policy is crucial to ensure that you have realistic expectations and adequate coverage for your needs. With various types of travel insurance available, you can choose the one that best suits your travel plans and enjoy your vacation with peace of mind. Investing in travel insurance ensures that you are prepared for the unexpected, allowing you to fully immerse yourself in the joy and excitement of your travels.
                  </p>
                  <div className="pt-6">
-                    <ButtonRotate text="GET COVERED NOW • " />
+                    <Link href="/travel-insurance/apply">
+                      <ButtonRotate text="GET COVERED NOW • " />
+                    </Link>
                  </div>
               </div>
            </div>

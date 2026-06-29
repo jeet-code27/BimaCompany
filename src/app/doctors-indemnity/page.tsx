@@ -15,6 +15,7 @@ import {
   Banknote
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function DoctorsIndemnityPage() {
   return (
@@ -58,7 +59,9 @@ export default function DoctorsIndemnityPage() {
               </div>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">
-                <ButtonRotate text="GET A FREE QUOTE • " />
+                <Link href="/doctors-indemnity/apply">
+                  <ButtonRotate text="GET A FREE QUOTE • " />
+                </Link>
               </div>
             </div>
           </div>

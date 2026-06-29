@@ -40,7 +40,9 @@ export default function PetInsurancePage() {
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">
-                <ButtonRotate text="CHECK OUR PRICES • " />
+                <Link href="/pet-insurance/apply">
+                  <ButtonRotate text="CHECK OUR PRICES • " />
+                </Link>
                 <div className="text-sm text-muted-foreground text-left">
                   <p className="font-semibold text-foreground flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-green-500"/> Sign up in seconds.</p>
                   <p className="font-semibold text-foreground flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-green-500"/> Get paid in minutes.</p>
@@ -146,7 +148,9 @@ export default function PetInsurancePage() {
                   <p className="text-muted-foreground leading-relaxed mb-8">
                     The pet insurance market in India is nascent compared to Western countries, but with rising adoption and veterinary costs, specialized plans are now essential.
                   </p>
-                  <ButtonRotate text="GET STARTED NOW • " />
+                  <Link href="/pet-insurance/apply">
+                    <ButtonRotate text="GET STARTED NOW • " />
+                  </Link>
                 </div>
               </div>
 

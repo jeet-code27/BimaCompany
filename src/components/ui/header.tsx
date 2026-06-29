@@ -34,6 +34,11 @@ import {
 	ShieldCheck,
 } from 'lucide-react';
 
+const InstagramIcon = ({ className }: { className?: string }) => <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>;
+const XIcon = ({ className }: { className?: string }) => <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>;
+const LinkedinIcon = ({ className }: { className?: string }) => <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>;
+const FacebookIcon = ({ className }: { className?: string }) => <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>;
+
 type LinkItem = {
 	title: string;
 	href: string;
@@ -83,8 +88,8 @@ export function Header() {
 									<div className="p-2">
 										<p className="text-muted-foreground text-sm">
 											Not sure where to start?{' '}
-											<Link href="#" className="text-foreground font-medium hover:underline">
-												Talk to an advisor
+											<Link href="tel:+919821774565" className="text-foreground font-medium hover:underline">
+												Call us: +91-9821774565
 											</Link>
 										</p>
 									</div>
@@ -125,9 +130,16 @@ export function Header() {
 						</NavigationMenuList>
 					</NavigationMenu>
 				</div>
-				<div className="hidden items-center gap-2 md:flex">
-					<Button variant="outline">Login</Button>
-					<Button variant="cta">Get a Quote</Button>
+				<div className="hidden items-center gap-4 md:flex">
+					<div className="flex items-center gap-3 pr-2 border-r border-border">
+						<Link href="https://www.instagram.com/bimacompany_/" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors"><InstagramIcon className="w-4 h-4" /></Link>
+						<Link href="https://x.com/Bima_Company" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors"><XIcon className="w-4 h-4" /></Link>
+						<Link href="https://www.linkedin.com/company/bimacompany/" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors"><LinkedinIcon className="w-4 h-4" /></Link>
+						<Link href="https://www.facebook.com/people/Bima-Company/61562498353993/" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors"><FacebookIcon className="w-4 h-4" /></Link>
+					</div>
+					<Link href="/get-a-quote" className="w-full">
+						<Button variant="cta" className="w-full">Get a Quote</Button>
+					</Link>
 				</div>
 				<Button
 					size="icon"
@@ -157,13 +169,18 @@ export function Header() {
 						))}
 					</div>
 				</NavigationMenu>
-				<div className="flex flex-col gap-2">
-					<Button variant="outline" className="w-full bg-transparent">
-						Login
-					</Button>
-					<Button variant="cta" className="w-full">
-						Get a Quote
-					</Button>
+				<div className="flex flex-col gap-4 mt-auto pt-4 border-t border-border">
+					<div className="flex items-center justify-center gap-6 pb-2">
+						<Link href="https://www.instagram.com/bimacompany_/" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors"><InstagramIcon className="w-5 h-5" /></Link>
+						<Link href="https://x.com/Bima_Company" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors"><XIcon className="w-5 h-5" /></Link>
+						<Link href="https://www.linkedin.com/company/bimacompany/" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors"><LinkedinIcon className="w-5 h-5" /></Link>
+						<Link href="https://www.facebook.com/people/Bima-Company/61562498353993/" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors"><FacebookIcon className="w-5 h-5" /></Link>
+					</div>
+					<Link href="/get-a-quote" className="w-full">
+						<Button variant="cta" className="w-full">
+							Get a Quote
+						</Button>
+					</Link>
 				</div>
 			</MobileMenu>
 		</header>
