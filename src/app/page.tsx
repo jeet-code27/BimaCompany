@@ -4,6 +4,16 @@ import { HowItWorks } from "@/components/ui/how-it-works";
 import { WhyChooseUs } from "@/components/ui/why-choose-us";
 import { StaggerTestimonials } from "@/components/ui/stagger-testimonials";
 import { CinematicFooter } from "@/components/ui/motion-footer";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Best Premium Online Insurance Plans",
+  description: "Secure your future with Bima Company. We offer top-tier auto, home, crop, pet, and commercial insurance plans tailored to your needs. Get a free quote today!",
+  keywords: ["buy insurance online", "auto insurance india", "home insurance", "bima company", "best insurance plans", "get insurance quote", "premium insurance"],
+  alternates: {
+    canonical: '/',
+  },
+};
 
 // TODO: swap href "#" for the real Bima Company URLs once the site is wired up
 const services: InsuranceService[] = [

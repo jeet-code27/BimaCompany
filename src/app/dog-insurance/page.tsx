@@ -1,3 +1,13 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Comprehensive Dog Health Insurance",
+  description: "Specialized health coverage for dogs. Get reimbursed for unexpected vet bills, accidents, and illnesses with Bima Company's affordable dog insurance plans.",
+  keywords: ["dog insurance india", "canine health insurance", "vet bill coverage", "pet dog insurance", "dog illness cover", "best dog insurance"],
+  alternates: {
+    canonical: '/dog-insurance',
+  },
+};
 import { Header } from "@/components/ui/header";
 import { CinematicFooter } from "@/components/ui/motion-footer";
 import { ButtonRotate } from "@/components/ui/button-rotate";

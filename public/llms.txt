@@ -1,0 +1,15 @@
+# Bima Company
+
+Bima Company (https://bimacompany.com) provides various insurance products to help you protect what matters most.
+
+## Our Services
+- Auto Insurance: Comprehensive coverage for your vehicles.
+- Crop Insurance: Protection for farmers against agricultural risks.
+- Cyber Insurance: Safeguard your business from digital threats.
+- Doctors Indemnity: Professional liability insurance for medical practitioners.
+- Pet & Dog Insurance: Health and wellness coverage for your furry friends.
+- Travel Insurance: Secure your trips and vacations.
+- Wedding Insurance: Protect your special day from unexpected events.
+- Home Insurance: Comprehensive protection for your house and belongings.
+
+Contact us today to get a quote and find the right insurance plan for your needs.

@@ -1,3 +1,13 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Domestic & Global Travel Insurance",
+  description: "Travel with peace of mind. Bima Company offers coverage for trip cancellations, lost baggage, and medical emergencies abroad. Protect your next trip today.",
+  keywords: ["travel insurance india", "international travel insurance", "trip cancellation insurance", "overseas travel insurance", "domestic travel insurance", "holiday insurance"],
+  alternates: {
+    canonical: '/travel-insurance',
+  },
+};
 import { Header } from "@/components/ui/header";
 import { CinematicFooter } from "@/components/ui/motion-footer";
 import { ButtonRotate } from "@/components/ui/button-rotate";

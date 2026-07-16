@@ -1,3 +1,13 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Comprehensive Event & Wedding Cover",
+  description: "Protect your big fat Indian wedding from unexpected cancellations, vendor bankruptcies, and venue damage. Ensure your special day is financially safeguarded.",
+  keywords: ["wedding insurance india", "event cancellation insurance", "marriage insurance", "wedding venue insurance", "special event insurance", "indian wedding insurance"],
+  alternates: {
+    canonical: '/wedding-insurance',
+  },
+};
 import { Header } from "@/components/ui/header";
 import { CinematicFooter } from "@/components/ui/motion-footer";
 import { ButtonRotate } from "@/components/ui/button-rotate";

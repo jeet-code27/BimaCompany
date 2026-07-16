@@ -1,3 +1,13 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home & Renters Property Insurance",
+  description: "Secure your house and personal belongings from natural disasters, theft, and legal liability with comprehensive home and renters insurance from Bima Company.",
+  keywords: ["home insurance india", "renters insurance", "property insurance", "house insurance quote", "homeowners insurance", "content insurance", "buy home insurance"],
+  alternates: {
+    canonical: '/home-insurance',
+  },
+};
 import { Header } from "@/components/ui/header";
 import { CinematicFooter } from "@/components/ui/motion-footer";
 import { ButtonRotate } from "@/components/ui/button-rotate";
@@ -20,6 +30,7 @@ import {
   HeartHandshake
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HomeInsurancePage() {
   return (
@@ -55,7 +66,9 @@ export default function HomeInsurancePage() {
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">
-                <ButtonRotate text="CHECK OUR PRICES • " />
+                <Link href="/get-a-quote">
+                  <ButtonRotate text="CHECK OUR PRICES • " />
+                </Link>
               </div>
             </div>
           </div>

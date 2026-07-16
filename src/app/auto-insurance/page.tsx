@@ -1,3 +1,13 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Two & Four Wheeler Auto Insurance",
+  description: "Get comprehensive auto insurance in India. Protect your car or bike against accidents, theft, and third-party liabilities with Bima Company. Get a quote now.",
+  keywords: ["car insurance india", "two wheeler insurance", "third party motor insurance", "comprehensive auto insurance", "bike insurance", "vehicle insurance quote", "best auto insurance"],
+  alternates: {
+    canonical: '/auto-insurance',
+  },
+};
 import { Header } from "@/components/ui/header";
 import { CinematicFooter } from "@/components/ui/motion-footer";
 import { ButtonRotate } from "@/components/ui/button-rotate";
@@ -16,6 +26,7 @@ import {
   Banknote
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AutoInsurancePage() {
   return (
@@ -51,7 +62,9 @@ export default function AutoInsurancePage() {
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">
-                <ButtonRotate text="CHECK OUR PRICES • " />
+                <Link href="/get-a-quote">
+                  <ButtonRotate text="CHECK OUR PRICES • " />
+                </Link>
               </div>
             </div>
           </div>

@@ -1,3 +1,13 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Comprehensive Pet Health Insurance",
+  description: "Give your pets the care they deserve. Our comprehensive pet insurance covers accidents, severe illnesses, and routine veterinary visits. Get a free estimate.",
+  keywords: ["pet insurance india", "cat insurance", "pet health coverage", "pet vet insurance", "buy pet insurance", "affordable pet insurance"],
+  alternates: {
+    canonical: '/pet-insurance',
+  },
+};
 import { Header } from "@/components/ui/header";
 import { CinematicFooter } from "@/components/ui/motion-footer";
 import { ButtonRotate } from "@/components/ui/button-rotate";

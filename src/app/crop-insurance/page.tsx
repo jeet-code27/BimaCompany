@@ -1,3 +1,13 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "PMFBY Crop Insurance & Farm Cover",
+  description: "Affordable agricultural and crop insurance for Indian farmers. Protect your harvest against weather anomalies and pests under the PMFBY scheme. Apply today.",
+  keywords: ["crop insurance india", "pmfby", "agriculture insurance", "farm insurance", "farmers insurance", "pmfby scheme online"],
+  alternates: {
+    canonical: '/crop-insurance',
+  },
+};
 import { Header } from "@/components/ui/header";
 import { CinematicFooter } from "@/components/ui/motion-footer";
 import { ButtonRotate } from "@/components/ui/button-rotate";
@@ -17,6 +27,7 @@ import {
   HeartHandshake
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function CropInsurancePage() {
   return (
@@ -52,7 +63,9 @@ export default function CropInsurancePage() {
               </div>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">
-                <ButtonRotate text="CHECK OUR PRICES • " />
+                <Link href="/get-a-quote">
+                  <ButtonRotate text="CHECK OUR PRICES • " />
+                </Link>
               </div>
             </div>
           </div>

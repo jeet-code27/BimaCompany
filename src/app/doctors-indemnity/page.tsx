@@ -1,3 +1,13 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Doctors Medical Indemnity Insurance",
+  description: "Professional liability and medical malpractice insurance tailored specifically for medical practitioners and doctors in India. Ensure your career is protected.",
+  keywords: ["doctors indemnity insurance", "medical malpractice insurance", "professional liability for doctors", "medical indemnity cover", "doctors liability insurance", "practitioner insurance"],
+  alternates: {
+    canonical: '/doctors-indemnity',
+  },
+};
 import { Header } from "@/components/ui/header";
 import { CinematicFooter } from "@/components/ui/motion-footer";
 import { ButtonRotate } from "@/components/ui/button-rotate";

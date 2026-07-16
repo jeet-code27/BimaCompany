@@ -1,3 +1,13 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Cyber Liability Business Insurance",
+  description: "Protect your company from digital threats, data breaches, and ransomware attacks with comprehensive cyber liability insurance from Bima Company. Get a quote.",
+  keywords: ["cyber insurance", "data breach coverage", "cyber liability insurance india", "ransomware protection", "commercial cyber insurance", "digital threat cover"],
+  alternates: {
+    canonical: '/cyber-insurance',
+  },
+};
 import { Header } from "@/components/ui/header";
 import { CinematicFooter } from "@/components/ui/motion-footer";
 import { ButtonRotate } from "@/components/ui/button-rotate";

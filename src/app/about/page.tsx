@@ -2,6 +2,16 @@ import { Header } from "@/components/ui/header";
 import EnhancedBackgroundPaths from "@/components/ui/modern-background-paths";
 import { CinematicFooter } from "@/components/ui/motion-footer";
 import { CheckCircle2 } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Our Insurance Agency & Mission",
+  description: "Learn about Bima Company's core mission to provide reliable, affordable, and comprehensive insurance solutions across India. Discover our values and expertise.",
+  keywords: ["about bima company", "insurance agency history", "our mission", "trusted insurance partner", "insurance experts india", "reliable insurance company"],
+  alternates: {
+    canonical: '/about',
+  },
+};
 
 export default function AboutPage() {
   return (

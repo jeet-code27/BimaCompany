@@ -1,5 +1,13 @@
-'use client';
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Get a Free Online Insurance Quote",
+  description: "Apply for a personalized online insurance quote from Bima Company. Our process is fast, completely free, and hassle-free. Compare our best insurance plans now.",
+  keywords: ["insurance quote", "free insurance estimate", "compare insurance", "online insurance quote", "instant insurance quote", "best insurance rates india"],
+  alternates: {
+    canonical: '/get-a-quote',
+  },
+};
 import { Header } from "@/components/ui/header";
 import { CinematicFooter } from "@/components/ui/motion-footer";
 import Link from "next/link";
